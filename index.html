@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Failtè! | Isle of Islay</title>
+    <style>
+      body {
+        background: linear-gradient(#192e59, #1d3273);
+        margin: 0px;
+      }
+      h1 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        letter-spacing: 3px;
+        text-align: center;
+        color: #fcfdfe;
+      }
+      h2 {
+        border: 1px solid #3a7c44;
+        border-radius: 30px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        max-width: 100%;
+        padding: 15px;
+        text-align: center;
+        color: #fcfdfe;
+      }
+      hr {
+        border: 1px solid #3a7c44;
+        margin-top: 0;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 6px;
+      }
+      p {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 20px 0 10px;
+        color: #fcfdfe;
+        line-height: 26px;
+      }
+      a {
+        font-weight: 600;
+      }
+      button {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        display: block;
+        margin: 20px auto;
+        background: #3a7c44;
+        color: #fcfdfe;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      footer {
+        background-color: #192e59;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 13px;
+        text-align: right;
+        color: #acc3f2;
+        padding: 15px 25px 25px 0px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+      .caption {
+        text-align: right;
+        font-size: 13px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .learn-more {
+        text-decoration: none;
+        color: #fcfdfe;
+        font-size: 15px;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .name {
+        text-decoration: none;
+        color: #acc3f2;
+      }
+      .name:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Isle of Islay</h1>
+      <h2><em>Banrìgh nan Eilean</em></h2>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Wfm_islay_landsat.jpg"
+        alt="Satellite image of the Isle of Islay"
+      />
+      <p class="caption">Satellite image of the Isle of Islay</p>
+      <hr />
+      <p>
+        Islay is the southernmost of the Inner Hebrides islands, off the west
+        coast of Scotland. Along with the neighbouring island of Jura, it’s
+        known for its whisky. Numerous distilleries produce the island’s
+        characteristically peaty single malts. In the northeast, 2 islands on
+        Loch Finlaggan are dotted with the remains of an ancient settlement,
+        including a prehistoric fort and medieval tombstones.
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Islay"
+          target="_blank"
+          class="learn-more"
+        >
+          👉 Learn more on Wikipedia
+        </a>
+      </p>
+      <button class="visit-button">
+        ⛴ Visit Islay
+      </button>
+    </div>
+    <footer>
+      This page was built by
+      <a
+        href="https://www.linkedin.com/in/kayleigh-monaghan/"
+        class="name"
+        target="_blank"
+        >👩‍💻 Kayleigh Monaghan
+      </a>
+    </footer>
+    <script>
+      function visit() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+
+        if (name.length > 0) {
+          alert(
+            "Tapadh leat, " +
+              name +
+              "! We'll be in touch shortly with your travel guide! 🥃"
+          );
+        } else {
+          alert(
+            "Oh no! 😔 Please enter your details to recieve your travel guide."
+          );
+        }
+      }
+      let visitButton = document.querySelector(".visit-button");
+      visitButton.addEventListener("click", visit);
+    </script>
+  </body>
+</html>
